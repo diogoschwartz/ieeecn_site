@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IEEE Seção Centro-Norte Brasil</title>
+<style>
+  :root {
+    --azul-ieee: #00629B;
+    --azul-escuro: #003a5c;
+    --cinza-claro: #f4f6f8;
+    --cinza-texto: #333;
+    --branco: #fff;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--cinza-texto);
+    background: var(--branco);
+    line-height: 1.6;
+  }
+  header {
+    background: linear-gradient(135deg, var(--azul-escuro), var(--azul-ieee));
+    color: var(--branco);
+    padding: 40px 20px;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0 0 8px 0;
+    font-size: 2.2em;
+  }
+  header p {
+    margin: 0;
+    font-size: 1.1em;
+    opacity: 0.9;
+  }
+  nav {
+    background: var(--azul-escuro);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  nav a {
+    color: var(--branco);
+    text-decoration: none;
+    padding: 14px 20px;
+    font-weight: bold;
+    font-size: 0.95em;
+  }
+  nav a:hover {
+    background: var(--azul-ieee);
+  }
+  main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  section {
+    padding: 50px 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  section:last-of-type {
+    border-bottom: none;
+  }
+  h2 {
+    color: var(--azul-ieee);
+    border-left: 5px solid var(--azul-ieee);
+    padding-left: 12px;
+    font-size: 1.6em;
+  }
+  h3 {
+    color: var(--azul-escuro);
+  }
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  .card {
+    background: var(--cinza-claro);
+    border-radius: 8px;
+    padding: 20px;
+    border-top: 4px solid var(--azul-ieee);
+  }
+  .card h3 {
+    margin: 0 0 6px 0;
+    font-size: 1.1em;
+  }
+  .card .cargo {
+    font-weight: bold;
+    color: var(--azul-ieee);
+    margin: 0 0 8px 0;
+  }
+  .card a {
+    color: var(--azul-ieee);
+    text-decoration: none;
+    word-break: break-all;
+  }
+  .card a:hover {
+    text-decoration: underline;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  table th, table td {
+    text-align: left;
+    padding: 10px 14px;
+    border-bottom: 1px solid #ddd;
+  }
+  table th {
+    background: var(--azul-ieee);
+    color: var(--branco);
+  }
+  table tr:nth-child(even) {
+    background: var(--cinza-claro);
+  }
+  ul.ramos {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    list-style: none;
+    padding: 0;
+  }
+  ul.ramos li {
+    background: var(--cinza-claro);
+    margin-bottom: 10px;
+    padding: 10px 14px;
+    border-left: 4px solid var(--azul-ieee);
+    break-inside: avoid;
+  }
+  .ig-card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    border-top: 4px solid transparent;
+    border-image: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888) 1;
+  }
+  .ig-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  }
+  .ig-icon {
+    font-size: 1.4em;
+  }
+  .destaque {
+    background: var(--cinza-claro);
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+  }
+  .contato-box {
+    background: var(--azul-escuro);
+    color: var(--branco);
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 20px;
+  }
+  .contato-box a {
+    color: #cfe8f7;
+  }
+  footer {
+    background: #1a1a1a;
+    color: #ccc;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.85em;
+    margin-top: 20px;
+  }
+  footer strong {
+    color: var(--branco);
+    display: block;
+    margin-bottom: 6px;
+  }
+  @media (max-width: 600px) {
+    ul.ramos { columns: 1; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>IEEE Seção Centro-Norte Brasil</h1>
+  <p>Institute of Electrical and Electronics Engineers — Região 9 (América Latina)</p>
+</header>
+
+<nav>
+  <a href="#sobre">A Seção</a>
+  <a href="#diretoria">Diretoria</a>
+  <a href="#ramos">Ramos Estudantis</a>
+  <a href="#noticias">Notícias</a>
+  <a href="#instagram">Instagram</a>
+  <a href="#contato">Contato</a>
+</nav>
+
+<main>
+
+  <section id="sobre">
+    <h2>A Seção</h2>
+    <p>Criada em <strong>17 de fevereiro de 1977</strong>, a IEEE Seção Centro-Norte Brasil representa legalmente o IEEE Internacional nos estados do <strong>Acre, Amapá, Amazonas, Goiás, Mato Grosso, Mato Grosso do Sul, Pará, Rondônia, Roraima, Tocantins</strong> e no <strong>Distrito Federal</strong>.</p>
+    <p>Reporta-se à <strong>Região 9 – América Latina</strong>, em termos de organização administrativa e financeira.</p>
+    <p>Sua atribuição é estimular e coordenar o planejamento de todos os Capítulos e Comitês, fornecendo apoio administrativo para a consecução dos objetivos traçados pelos mesmos. Administra a Sede e as finanças da Seção.</p>
+
+    <div class="destaque">
+      <h3>Sobre o IEEE</h3>
+      <p>Criado em 1884, nos E.U.A., o IEEE é uma sociedade técnico-profissional internacional com sede em Nova Jersey, dedicada ao avanço da teoria e prática da engenharia nos campos da eletricidade, eletrônica e computação. O IEEE congrega mais de 410.000 associados, entre engenheiros, cientistas, pesquisadores e outros profissionais, em cerca de 160 países.</p>
+      <p>É dirigido por um Board of Directors e por um Executive Committee. Compõe-se de 10 Regiões, 39 Sociedades Técnicas, 7 Conselhos Técnicos e por aproximadamente 1850 Society Chapters e 342 Seções.</p>
+    </div>
+
+    <h3>O IEEE no Brasil</h3>
+    <p>Das 333 Seções do IEEE existentes no mundo, 5 estão no Brasil e, juntas, formam o Conselho Brasil:</p>
+    <table>
+      <thead>
+        <tr><th>Seção</th><th>Estados abrangidos</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Nordeste Brasil</td><td>BA, PE, PB, CE, RN, AL, SE, PI, MA</td></tr>
+        <tr><td>Minas Gerais</td><td>MG</td></tr>
+        <tr><td>Rio de Janeiro</td><td>RJ, ES</td></tr>
+        <tr><td><strong>Centro-Norte Brasil</strong></td><td><strong>DF, GO, MT, MS, PA, TO, AM, RO, RR, AC, AP</strong></td></tr>
+        <tr><td>Sul Brasil</td><td>SP, SC, PR, RS</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section id="diretoria">
+    <h2>Diretoria (Biênio 2023-2024)</h2>
+    <p>Compõem a Diretoria da IEEE Seção Centro-Norte Brasil:</p>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Filipe Emídio Tôrres</h3>
+        <p class="cargo">Presidente</p>
+        <a href="mailto:filipee77@ieee.org">filipee77@ieee.org</a>
+      </div>
+      <div class="card">
+        <h3>Werbeston Douglas de Oliveira</h3>
+        <p class="cargo">Vice-Presidente</p>
+        <a href="mailto:wdoliveira@unifap.br">wdoliveira@unifap.br</a>
+      </div>
+      <div class="card">
+        <h3>Edson Bianor Ferreira Pinheiro</h3>
+        <p class="cargo">Secretário</p>
+        <a href="mailto:e.b.ferreirapinheiro@ieee.org">e.b.ferreirapinheiro@ieee.org</a>
+      </div>
+      <div class="card">
+        <h3>Gustavo Viana Penido</h3>
+        <p class="cargo">Tesoureiro</p>
+        <a href="mailto:gustavo.penido@ieee.org">gustavo.penido@ieee.org</a>
+      </div>
+      <div class="card">
+        <h3>Werbeston Douglas de Oliveira</h3>
+        <p class="cargo">Coordenador YP Centro-Norte Brasil</p>
+        <a href="mailto:wdoliveira@unifap.br">wdoliveira@unifap.br</a><br>
+        <a href="https://www.facebook.com/ieeeypcentronortebr" target="_blank" rel="noopener">Facebook YP Centro-Norte Brasil</a>
+      </div>
+      <div class="card">
+        <h3>Nayara Vasconcelos Estrabis</h3>
+        <p class="cargo">Coordenadora SAC (Student Activities Committee)</p>
+        <a href="mailto:nayestrabis@ieee.org">nayestrabis@ieee.org</a>
+      </div>
+      <div class="card">
+        <h3>Jean Lucas Tourinho Fonseca</h3>
+        <p class="cargo">Coordenador SRC (Student Representative Committee)</p>
+        <a href="mailto:tourinho@ieee.org">tourinho@ieee.org</a>
+      </div>
+    </div>
+
+    <h3 style="margin-top:40px;">Diretoria do Conselho Brasil IEEE</h3>
+    <div class="card-grid">
+      <div class="card">
+        <h3>Mario Yoshitaro Ogava</h3>
+        <p class="cargo">Presidente</p>
+        <a href="mailto:m.ogava@ieee.org">m.ogava@ieee.org</a>
+      </div>
+      <div class="card">
+        <h3>Thiago Ribeiro de Alencar</h3>
+        <p class="cargo">Coordenador do Comitê de Desenvolvimento de Membresia</p>
+        <a href="mailto:thiago.r.alencar@ieee.org">thiago.r.alencar@ieee.org</a>
+      </div>
+      <div class="card">
+        <h3>Camila Seibel Gehrke</h3>
+        <p class="cargo">Representante YP Conselho Brasil</p>
+        <a href="mailto:camilagehrke@ieee.org">camilagehrke@ieee.org</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="ramos">
+    <h2>Ramos Estudantis — Centro-Norte Brasil</h2>
+    <p>A Seção Centro-Norte Brasil conta com os seguintes Ramos Estudantis:</p>
+    <ul class="ramos">
+      <li>Universidade de Brasília – UnB</li>
+      <li>Instituto Federal de Brasília (IFB)</li>
+      <li>Universidade Federal do Pará – UFPA-Belém</li>
+      <li>Universidade do Estado de Mato Grosso – UNEMAT-Sinop</li>
+      <li>Universidade Federal do Tocantins – UFT-Palmas</li>
+      <li>Universidade Federal de Goiás (UFG-Goiânia)</li>
+      <li>Universidade Federal de Mato Grosso do Sul (UFMS-Campo Grande)</li>
+    </ul>
+  </section>
+
+  <section id="noticias">
+    <h2>Notícias</h2>
+    <div class="destaque">
+      <h3>Eleição da Diretoria — Seção Centro-Norte Brasil (Biênio 2023-2024)</h3>
+      <p><em>Publicado em 26 de setembro de 2022</em></p>
+      <p>Após o encerramento do período de envio de candidaturas referente à eleição do Comitê Executivo do Biênio 2023-2024, a IEEE Seção Centro-Norte Brasil informou que houve manifestação da seguinte chapa:</p>
+      <table>
+        <tbody>
+          <tr><td>Presidente (Chair)</td><td>Filipe Emídio Torres</td></tr>
+          <tr><td>Vice-Presidente</td><td>Werbeston Douglas de Oliveira</td></tr>
+          <tr><td>Secretário</td><td>Edson Bianor Ferreira Pinheiro</td></tr>
+          <tr><td>Tesoureiro</td><td>Gustavo Viana Penido</td></tr>
+        </tbody>
+      </table>
+      <p>Os candidatos a cada cargo foram validados por votação eletrônica dos membros profissionais do IEEE da Seção Centro-Norte Brasil, realizada entre 17 de outubro e 20 de novembro de 2022.</p>
+      <p>Dúvidas sobre o procedimento de votação eletrônica puderam ser encaminhadas para <a href="mailto:centronortebrasil@ieee.org">centronortebrasil@ieee.org</a>.</p>
+    </div>
+  </section>
+
+  <section id="instagram">
+    <h2>Instagram</h2>
+    <p>Acompanhe os perfis oficiais da Seção e dos Ramos Estudantis Centro-Norte Brasil:</p>
+
+    <h3>Seção e Comitês</h3>
+    <div class="card-grid">
+      <a class="card ig-card" href="https://www.instagram.com/ieeeypcnbr/" target="_blank" rel="noopener">
+        <span class="ig-icon">&#128247;</span>
+        <h3>@ieeeypcnbr</h3>
+        <p class="cargo">IEEE YP Centro-Norte Brasil</p>
+      </a>
+      <a class="card ig-card" href="https://www.instagram.com/ieeesaccn/" target="_blank" rel="noopener">
+        <span class="ig-icon">&#128247;</span>
+        <h3>@ieeesaccn</h3>
+        <p class="cargo">IEEE SAC Centro-Norte Brasil</p>
+      </a>
+    </div>
+
+    <h3 style="margin-top:40px;">Ramos Estudantis</h3>
+    <div class="card-grid">
+      <a class="card ig-card" href="https://www.instagram.com/ramoieeeunb/" target="_blank" rel="noopener">
+        <span class="ig-icon">&#128247;</span>
+        <h3>@ramoieeeunb</h3>
+        <p class="cargo">Ramo IEEE UnB</p>
+      </a>
+      <a class="card ig-card" href="https://www.instagram.com/ramo_ieee_ufac/" target="_blank" rel="noopener">
+        <span class="ig-icon">&#128247;</span>
+        <h3>@ramo_ieee_ufac</h3>
+        <p class="cargo">Ramo IEEE UFAC</p>
+      </a>
+      <a class="card ig-card" href="https://www.instagram.com/ieee_ufmt/" target="_blank" rel="noopener">
+        <span class="ig-icon">&#128247;</span>
+        <h3>@ieee_ufmt</h3>
+        <p class="cargo">Ramo IEEE UFMT</p>
+      </a>
+      <a class="card ig-card" href="https://www.instagram.com/ramo_ieee_ufms/" target="_blank" rel="noopener">
+        <span class="ig-icon">&#128247;</span>
+        <h3>@ramo_ieee_ufms</h3>
+        <p class="cargo">Ramo IEEE UFMS</p>
+      </a>
+      <a class="card ig-card" href="https://www.instagram.com/ieeeufg/" target="_blank" rel="noopener">
+        <span class="ig-icon">&#128247;</span>
+        <h3>@ieeeufg</h3>
+        <p class="cargo">Ramo IEEE UFG</p>
+      </a>
+    </div>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <div class="contato-box">
+      <p><strong>Campus Universitário Darcy Ribeiro</strong><br>
+      Prédio SG-11, sala 30<br>
+      70910-900 – Brasília (DF)</p>
+      <p>E-mail: <a href="mailto:centronortebrasil@ieee.org">centronortebrasil@ieee.org</a></p>
+      <p>Site: <a href="http://sites.ieee.org/centro-norte-brasil" target="_blank" rel="noopener">sites.ieee.org/centro-norte-brasil</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <strong>SECAO BRASILIA DO INSTITUTO DOS ENGENHEIROS ELETRICISTAS E ELETRONICOS - IEEE</strong>
+  CNPJ: 05.125.563/0001-20<br>
+  Campus Universitário Darcy Ribeiro, Prédio SG-11, sala 30 — 70910-900 — Brasília (DF)<br><br>
+  &copy; 2026 IEEE Seção Centro-Norte Brasil. Todos os direitos reservados.
+</footer>
+
+</body>
+</html>
